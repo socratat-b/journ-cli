@@ -3,6 +3,7 @@ import { deleteEntry } from "./src/commands/delete.js";
 import { listEntries } from "./src/commands/list.js";
 import { readEntry } from "./src/commands/read.js";
 import { showHelp } from "./src/commands/showHelp.js";
+import { showStat } from "./src/commands/stats.js";
 
 const [, , command, ...args] = process.argv;
 
@@ -21,6 +22,10 @@ const main = async () => {
 
     case "del":
       await deleteEntry(args[0]);
+      break;
+
+    case "stat":
+      showStat(args[0]);
       break;
 
     case "--help":
