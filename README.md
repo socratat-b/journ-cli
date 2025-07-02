@@ -5,7 +5,7 @@ A simple command-line journal manager built with Node.js to practice file system
 ## Features
 
 - [ x ] Create daily journal entries
-- [ ] List all entries
+- [ x ] List all entries
 - [ ] Read specific entries by date
 - [ ] Delete entries
 
