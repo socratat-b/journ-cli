@@ -8,6 +8,7 @@ A simple command-line journal manager built with Node.js to practice file system
 - [x] List all entries
 - [x] Read specific entries by date
 - [x] Delete entries
+- [x] View entry statistics (file size, last modified date)
 - [x] Built-in help system (`--help`)
 - [x] Automatic date-based file organization
 - [x] Duplicate entry prevention
@@ -40,6 +41,9 @@ journ read 2025-07-02
 
 # Delete an entry
 journ delete 2025-07-02
+
+# View statistics for an entry
+journ stat 2025-07-02
 ```
 
 ## Project Structure
@@ -53,7 +57,8 @@ journ-cli/
 │       ├── create.js    # Create entry command
 │       ├── read.js      # Read entry command
 │       ├── list.js      # List entries command
-│       └── delete.js    # Delete entry command
+│       ├── delete.js    # Delete entry command
+│       └── stats.js     # View entry statistics command
 ├── entries/             # Journal entries storage
 ├── journal.js           # Main application router
 ├── package.json
@@ -87,6 +92,7 @@ This project practices:
 | `list`       | Show all available journal entries   | `journ list`                 |
 | `read`       | Read a specific entry by date        | `journ read 2025-07-02`      |
 | `delete`     | Delete an entry by date              | `journ delete 2025-07-02`    |
+| `stat`       | View entry file statistics           | `journ stat 2025-07-02`      |
 
 ## Technical Details
 
