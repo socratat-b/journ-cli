@@ -5,22 +5,26 @@ import { readEntry } from "./src/commands/read.js";
 
 const [, , command, ...args] = process.argv;
 
-switch (command) {
-  case "create":
-    createEntry(args[0]);
-    break;
-  case "list":
-    listEntries();
-    break;
+const main = async () => {
+  switch (command) {
+    case "create":
+      await createEntry(args[0]);
+      break;
+    case "list":
+      await listEntries();
+      break;
 
-  case "read":
-    readEntry(args[0]);
-    break;
+    case "read":
+      await readEntry(args[0]);
+      break;
 
-  case "del":
-    deleteEntry(args[0]);
-    break;
+    case "del":
+      await deleteEntry(args[0]);
+      break;
 
-  default:
-    console.log("Command not found!");
-}
+    default:
+      console.log("Command not found!");
+  }
+};
+
+main();
