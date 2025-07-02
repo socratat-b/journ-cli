@@ -1,0 +1,5 @@
+Journal Entry - 7/2/2025
+=======================================
+
+
+I created my first simple  CLI with a functions called create.js

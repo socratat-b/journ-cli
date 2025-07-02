@@ -1,0 +1,7 @@
+User types: journ create "Hello world"
+     ↓
+bin/journal (receives it)
+     ↓
+journal.js (sees "create" command)
+     ↓
+src/commands/create.js (does the actual file writing)

@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+import "../journal.js";
+
+// Setup Steps:
+// 1. Add shebang (#!/usr/bin/env node) - tells Linux to use Node.js
+// 2. Make executable: chmod +x bin/journal
+// 3. Add to package.json: "bin": {"journ": "bin/journal"}
+// 4. Import main app file to handle commands
