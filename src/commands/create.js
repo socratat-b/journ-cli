@@ -8,4 +8,6 @@ export async function createEntry(content) {
   const header = `Journal Entry - ${new Date().toLocaleDateString()}\n=======================================\n\n\n`;
 
   await writeFile(pathname, `${header}${content}`);
+
+  console.log("Journal created sucessfully");
 }
